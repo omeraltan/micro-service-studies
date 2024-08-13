@@ -1,0 +1,23 @@
+ext{
+    versions = [
+        springBoot          : '3.3.1'
+    ]
+    libs = [
+        springBootStarterWeb: "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}"
+    ]
+}
+
+
+
+/*
+ *
+ * Burası versiyon yönetim sistemi için bir library'dir.
+ * Versiyon numaralarını yönetebilmek için "versions" ekliyoruz.
+ * Versiyon kısmında spring boot'un versiyonu tanımlanmıştır.
+ * Kullanılan libraryler burada libs altında tanımlanmaktadır.
+ * Burada kullanılan ${versions.springBoot} ile versiyonda spring boot un versiyonu değiştirildiğinde altında bulunan
+ * bağımlılıklarında versiyonları otomatik olarak değişecektir.
+ * Alt projelere bu bağımlılıklar nasıl aktarılmaktadır.
+ *
+ *
+ */
