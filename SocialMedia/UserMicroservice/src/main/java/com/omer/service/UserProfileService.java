@@ -4,6 +4,7 @@ import com.omer.document.UserProfile;
 import com.omer.dto.request.CreateUserRequestDto;
 import com.omer.repository.UserProfileRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,5 +25,14 @@ public class UserProfileService {
 
     public List<UserProfile> getAll() {
         return repository.findAll();
+    }
+
+    @Cacheable("upper-case")
+    public String upperName(String name){
+        String result = name.toUpperCase();
+        try {
+            Thread.sleep(3000L);
+        }catch (Exception exception){}
+        return result;
     }
 }
