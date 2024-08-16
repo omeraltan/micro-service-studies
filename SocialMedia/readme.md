@@ -62,16 +62,16 @@ docker build -t configserver:v01 .
 ````
     2- docker hub üzerinde yayınlanacak ise
 ````bash
-docker build -t muhammedali55/configserver:v01 .
+docker build -t dockeromer/configserver:v01 .
 ````
     3- Eğer M chip bir macOS var ise 
 ````bash
-docker build --platform linux/amd64 -t muhammedali55/egitimconfigserver:v01 .
+docker build --platform linux/amd64 -t dockeromer/egitimconfigserver:v01 .
 
 
-docker build --platform linux/amd64 -t muhammedali55/egitimauth:v02 .
+docker build --platform linux/amd64 -t dockeromer/egitimauth:v02 .
 
 
-docker build --platform linux/amd64 -t muhammedali55/egitimuser:v02 .
+docker build --platform linux/amd64 -t dockeromer/egitimuser:v02 .
 
 ````
